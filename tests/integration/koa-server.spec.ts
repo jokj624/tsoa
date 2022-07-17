@@ -301,6 +301,16 @@ describe('Koa Server', () => {
         205,
       );
     });
+    
+    it('should unavailable for legal reasons status code', () => {
+      return verifyGetRequest(
+        basePath + `/Controller/unavailableForLegalReasonsStatusCode`,
+        (_err, res) => {
+          expect(res.status).to.equal(451);
+        },
+        451,
+      );
+    });
 
     it('should custom header', () => {
       return verifyGetRequest(

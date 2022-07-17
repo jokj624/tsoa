@@ -38,6 +38,11 @@ export class TestController extends Controller {
     });
   }
 
+  @Get('unavailableForLegalReasonsStatusCode')
+  public async unavailableForLegalReasonsStatusCode(): Promise<void> {
+    return;
+  }
+
   @Get('customHeader')
   public async customHeader(): Promise<void> {
     return new Promise<void>(resolve => {
